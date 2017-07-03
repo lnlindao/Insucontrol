@@ -53,6 +53,9 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spnProvincia.setAdapter(dataAdapter);
         spnProvincia.setOnItemSelectedListener(this);
+
+
+        
     }
 
     public String idProvincia(String prov){
