@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.espol.insucontrol.RegistroActivity">
+
+        <RelativeLayout
+            android:layout_width="368dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtUser"
+                android:layout_below="@+id/textView"
+                android:layout_centerVertical="true"
+                android:maxLines="1"
+                android:layout_alignRight="@+id/btnLogin"
+                android:layout_alignEnd="@+id/btnLogin"
+                android:layout_alignLeft="@+id/btnLogin"
+                android:layout_alignStart="@+id/btnLogin"
+                android:hint="@string/user"/>
+
+            <EditText
+                android:hint="@string/correo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPass"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/txtUser"
+                android:layout_alignRight="@+id/txtUser"
+                android:layout_alignEnd="@+id/txtUser"
+                android:layout_alignLeft="@+id/txtUser"
+                android:layout_alignStart="@+id/txtUser"
+                android:layout_marginBottom="15dp"
+                />
+
+
+            <EditText
+                android:hint="@string/pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/txtCorreo"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/txtPass"
+                android:layout_alignRight="@+id/txtUser"
+                android:layout_alignEnd="@+id/txtUser"
+                android:layout_alignLeft="@+id/txtUser"
+                android:layout_alignStart="@+id/txtUser"
+                android:layout_marginBottom="15dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_below="@id/txtCorreo"
+                android:id="@+id/txtFecha"
+                android:hint="@string/fecha"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/txtUser"
+                android:layout_alignEnd="@+id/txtUser"
+                android:layout_alignLeft="@+id/txtUser"
+                android:layout_alignStart="@+id/txtUser"
+                android:layout_marginBottom="15dp"
+                />
+
+            <RadioGroup
+                android:id="@+id/rdgenero"
+                android:layout_below="@id/txtFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="@string/m"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/f"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rdgenero"
+                android:orientation="horizontal"
+                >
+
+                <Spinner
+                    android:id="@+id/spnProvincia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></Spinner>
+
+
+                <Spinner
+                    android:id="@+id/spnCiudad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/siguiente"
+                android:id="@+id/btnSig"
+                android:nestedScrollingEnabled="true"
+                android:background="@color/colorAccent"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:layout_below="@+id/layout"
+                android:layout_centerHorizontal="true" />
+
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>

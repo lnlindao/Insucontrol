@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">InsuControl</string>
+    <string name="pass">Contraseña</string>
+    <string name="user">Nombre y Apellido</string>
+    <string name="correo">Correo</string>
+    <string name="fecha">Fecha</string>
+    <string name="m">Masculino</string>
+    <string name="f">Femenino</string>
+    <string name="info">Información Medica</string>
+    <string name="peso">Peso</string>
+    <string name="talla">Talla</string>
+    <string name="glucosa">Glucosa Objetivo</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="ratio">Ratio CH</string>
+    <string name="sens">Sensibilidad Insulina</string>
+
+    <!--Button-->
+    <string name="comenzar">Comenzar</string>
+    <string name="registro">Registrate</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="guardar">Guardar</string>
+
+
+    <string name="account_type">com.example.espol.insucontrol.account</string>
+    <string name="provider_authority">com.example.espol.insucontrol</string>
+
+</resources>
