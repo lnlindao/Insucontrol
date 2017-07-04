@@ -6,18 +6,18 @@
     <string name="fecha">Fecha</string>
     <string name="m">Masculino</string>
     <string name="f">Femenino</string>
-    <string name="info">Información Medica</string>
+    <string name="info">Información Médica</string>
     <string name="peso">Peso</string>
     <string name="talla">Talla</string>
     <string name="glucosa">Glucosa Objetivo</string>
     <string name="min">Min</string>
-    <string name="max">Max</string>
+    <string name="max">Máx</string>
     <string name="ratio">Ratio CH</string>
     <string name="sens">Sensibilidad Insulina</string>
 
     <!--Button-->
     <string name="comenzar">Comenzar</string>
-    <string name="registro">Registrate</string>
+    <string name="registro">Regístrate</string>
     <string name="siguiente">Siguiente</string>
     <string name="guardar">Guardar</string>
 

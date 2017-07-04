@@ -83,13 +83,13 @@
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:hint="@string/m"/>
+                    android:layout_height="50dp"
+                    android:hint="@string/m" />
 
                 <RadioButton
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:hint="@string/f"/>
+                    android:layout_height="50dp"
+                    android:hint="@string/f" />
 
             </RadioGroup>
 
@@ -104,13 +104,13 @@
                 <Spinner
                     android:id="@+id/spnProvincia"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></Spinner>
+                    android:layout_height="50dp"></Spinner>
 
 
                 <Spinner
                     android:id="@+id/spnCiudad"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="50dp">
 
                 </Spinner>
             </LinearLayout>
