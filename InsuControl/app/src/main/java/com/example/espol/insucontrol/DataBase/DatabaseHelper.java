@@ -11,9 +11,6 @@ import com.example.espol.insucontrol.Conexion.Constantes;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Lucky Ecuador on 15/07/2016.
- */
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     SQLiteDatabase db;

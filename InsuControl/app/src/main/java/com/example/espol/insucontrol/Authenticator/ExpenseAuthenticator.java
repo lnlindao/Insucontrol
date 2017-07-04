@@ -7,9 +7,7 @@ import android.accounts.NetworkErrorException;
 import android.content.Context;
 import android.os.Bundle;
 
-/**
- * Created by Lucky Ecuador on 15/07/2016.
- */
+
 public class ExpenseAuthenticator extends AbstractAccountAuthenticator {
     public ExpenseAuthenticator(Context context) {
         super(context);

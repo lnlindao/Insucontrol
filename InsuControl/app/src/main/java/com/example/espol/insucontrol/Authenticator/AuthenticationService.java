@@ -5,9 +5,6 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
-/**
- * Created by Lucky Ecuador on 15/07/2016.
- */
 
 //Bound service para gestionar la autenticación
 public class AuthenticationService extends Service {

@@ -3,9 +3,6 @@ package com.example.espol.insucontrol.DataBase;
 
 import com.example.espol.insucontrol.Conexion.Constantes;
 
-/**
- * Created by Lucky Ecuador on 24/11/2016.
- */
 
 public class Projection {
 

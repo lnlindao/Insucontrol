@@ -1,8 +1,5 @@
 package com.example.espol.insucontrol.Clases;
 
-/**
- * Created by Lucky Ecuador on 03/08/2016.
- */
 public class Provincia {
 
     public String id_provincia;

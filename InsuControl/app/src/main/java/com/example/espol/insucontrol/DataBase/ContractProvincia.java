@@ -7,9 +7,6 @@ import android.provider.BaseColumns;
 import com.example.espol.insucontrol.Conexion.Constantes;
 
 
-/**
- * Created by Lucky Ecuador on 15/07/2016.
- */
 public class ContractProvincia {
     /**
      * Representación de la tabla a consultar

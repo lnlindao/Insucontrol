@@ -43,9 +43,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Lucky Ecuador on 15/07/2016.
- */
 //Maneja la transferencia de datos entre el servidor y el cliente
 public class SyncAdapter extends AbstractThreadedSyncAdapter {
     private static final String TAG = SyncAdapter.class.getSimpleName();

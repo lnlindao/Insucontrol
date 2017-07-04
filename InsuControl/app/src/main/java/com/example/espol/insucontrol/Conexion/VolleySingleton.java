@@ -6,9 +6,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
-/**
- * Created by Lucky Ecuador on 05/07/2016.
- */
+
 public final class VolleySingleton {
 
     // Atributos

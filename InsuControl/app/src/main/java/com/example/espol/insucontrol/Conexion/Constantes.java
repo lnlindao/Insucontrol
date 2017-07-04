@@ -1,8 +1,6 @@
 package com.example.espol.insucontrol.Conexion;
 
-/**
- * Created by Lucky Ecuador on 29/06/2016.
- */
+
 public class Constantes {
 
 

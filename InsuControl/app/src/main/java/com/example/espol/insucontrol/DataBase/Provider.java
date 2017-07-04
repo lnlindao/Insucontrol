@@ -14,9 +14,6 @@ import android.text.TextUtils;
 import com.example.espol.insucontrol.Conexion.Constantes;
 
 
-/**
- * Created by Lucky Ecuador on 15/07/2016.
- */
 public class Provider extends ContentProvider {
     /**
      * Nombre de la base de datos

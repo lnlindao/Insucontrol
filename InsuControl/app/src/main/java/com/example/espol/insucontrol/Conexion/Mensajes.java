@@ -1,8 +1,6 @@
 package com.example.espol.insucontrol.Conexion;
 
-/**
- * Created by Lucky Ecuador on 02/12/2016.
- */
+
 
 public class Mensajes {
 
