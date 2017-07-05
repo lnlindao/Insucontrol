@@ -3,7 +3,7 @@
     <string name="pass">Contraseña</string>
     <string name="user">Nombre y Apellido</string>
     <string name="correo">Correo</string>
-    <string name="fecha">Fecha</string>
+    <string name="fecha">Fecha de nacimiento</string>
     <string name="m">Masculino</string>
     <string name="f">Femenino</string>
     <string name="info">Información Médica</string>
@@ -14,6 +14,7 @@
     <string name="max">Máx</string>
     <string name="ratio">Ratio CH</string>
     <string name="sens">Sensibilidad Insulina</string>
+    <string name="glucosaActual">Glucosa actual (GS)</string>
 
     <!--Button-->
     <string name="comenzar">Comenzar</string>
