@@ -55,7 +55,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
         spnProvincia.setOnItemSelectedListener(this);
 
 
-        
+
     }
 
     public String idProvincia(String prov){

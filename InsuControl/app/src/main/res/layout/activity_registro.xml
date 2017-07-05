@@ -10,14 +10,27 @@
             android:layout_width="368dp"
             android:layout_height="wrap_content">
 
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Información del Paciente"
+                android:textSize="18sp"
+                android:layout_marginBottom="30dp"
+                android:layout_alignRight="@+id/btnLogin"
+                android:layout_alignEnd="@+id/btnLogin"
+                android:layout_alignLeft="@+id/btnLogin"
+                android:layout_alignStart="@+id/btnLogin"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_marginTop="10dp"
                 android:layout_alignParentTop="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtUser"
-                android:layout_below="@+id/textView"
                 android:layout_centerVertical="true"
+                android:layout_below="@+id/info"
                 android:maxLines="1"
                 android:layout_alignRight="@+id/btnLogin"
                 android:layout_alignEnd="@+id/btnLogin"
@@ -76,19 +89,21 @@
 
             <RadioGroup
                 android:id="@+id/rdgenero"
-                android:layout_below="@id/txtFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/txtFecha"
+                android:layout_marginBottom="20dp"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="30dp"
                     android:hint="@string/m" />
 
                 <RadioButton
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
                     android:hint="@string/f" />
 
             </RadioGroup>
