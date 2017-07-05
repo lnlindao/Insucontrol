@@ -35,12 +35,12 @@
             android:id="@+id/txtPeso"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/Peso"
-            android:layout_toLeftOf="@+id/txtMin"
-            android:layout_toStartOf="@+id/txtMin"
             android:hint="Kg"
             android:inputType="number"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_alignBottom="@+id/Peso"
+            android:layout_alignRight="@+id/txtMax"
+            android:layout_alignEnd="@+id/txtMax" />
 
 
         <TextView
