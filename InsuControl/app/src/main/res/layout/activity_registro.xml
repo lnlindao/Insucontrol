@@ -7,15 +7,19 @@
     tools:context="com.example.espol.insucontrol.RegistroActivity">
 
     <RelativeLayout
-        android:layout_width="308dp"
-        android:layout_height="551dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:id="@+id/info"
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/btnLogin"
@@ -24,189 +28,189 @@
             android:layout_alignStart="@+id/btnLogin"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="20dp"
-            android:textColor="@color/colorPrimaryDark"
             android:text="Información del Representante"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TableRow
-            android:id="@+id/lineaUsuario"
+        <ImageView
+            android:id="@+id/correoPwd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/ic_user" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtUser"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/info">
+            android:layout_alignBottom="@+id/correoPwd"
+            android:layout_toEndOf="@+id/paciente"
+            android:layout_toRightOf="@+id/paciente">
 
-            <ImageView
-                android:id="@+id/correoPwd"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginBottom="40dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@mipmap/ic_user" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtUser"
+            <EditText
+                android:id="@+id/txtUser"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:hint="@string/user"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/txtUser"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/info"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:hint="@string/user"
-                    android:maxLines="1" />
-            </android.support.design.widget.TextInputLayout>
-        </TableRow>
+        <ImageView
+            android:id="@+id/correoIco"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/input_layout_txtPass"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@mipmap/ic_mail" />
 
-        <TableRow
-            android:id="@+id/lineaCorreo"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtCorreo"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/lineaUsuario">
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/input_layout_txtUser"
+            android:layout_toEndOf="@+id/correoPwd"
+            android:layout_toRightOf="@+id/correoPwd">
 
-            <ImageView
-                android:id="@+id/correoIco"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@mipmap/ic_mail" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtCorreo"
+            <EditText
+                android:id="@+id/txtCorreo"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_txtUser"
+                android:layout_toEndOf="@+id/correoIco"
+                android:layout_toRightOf="@+id/correoIco"
+                android:layout_weight="1"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
 
-                <EditText
-                    android:id="@+id/txtCorreo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:hint="@string/correo"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1" />
-            </android.support.design.widget.TextInputLayout>
-        </TableRow>
+        </android.support.design.widget.TextInputLayout>
 
-        <TableRow
-            android:id="@+id/lineaPwd"
+        <ImageView
+            android:id="@+id/icoPwd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/input_layout_txtPass"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/ic_pwd"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtPass"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/lineaCorreo">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_txtCorreo"
+            android:layout_toEndOf="@+id/icoPwd"
+            android:layout_toRightOf="@+id/icoPwd"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp">
 
-            <ImageView
-                android:id="@+id/icoPwd"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@mipmap/ic_pwd" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtPass"
+            <EditText
+                android:id="@+id/txtPass"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:maxLines="1" />
 
-                <EditText
-                    android:id="@+id/txtPass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="10dp"
-                    android:hint="@string/pass"
-                    android:inputType="textPassword"
-                    android:maxLines="1" />
-            </android.support.design.widget.TextInputLayout>
-        </TableRow>
-
+        </android.support.design.widget.TextInputLayout>
 
         <TextView
-            android:id="@+id/infoPaciente"
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lineaPwd"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_txtPass"
+            android:layout_marginTop="13dp"
+            android:layout_weight="1"
             android:text="Información del Paciente"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TableRow
-            android:id="@+id/lineaPaciente"
+        <ImageView
+            android:id="@+id/paciente"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_user"
+            android:layout_above="@+id/icoFecha"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtUserPaciente"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/infoPaciente">
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView4"
+            android:layout_toEndOf="@+id/paciente"
+            android:layout_toRightOf="@+id/paciente">
 
-            <ImageView
-                android:id="@+id/paciente"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginBottom="40dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@mipmap/ic_user" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtUserPaciente"
+            <EditText
+                android:id="@+id/txtUserPaciente"
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:hint="@string/user"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/txtUserPaciente"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/info"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
-                    android:hint="@string/user"
-                    android:maxLines="1" />
-            </android.support.design.widget.TextInputLayout>
-        </TableRow>
+        <ImageView
+            android:id="@+id/icoFecha"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_txtUserPaciente"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/ic_fecha" />
 
-        <TableRow
-            android:id="@+id/lineaFecha"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtFecha"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/lineaPaciente">
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/input_layout_txtUserPaciente"
+            android:layout_toEndOf="@+id/paciente"
+            android:layout_toRightOf="@+id/paciente">
 
-            <ImageView
-                android:id="@+id/icoFecha"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                android:src="@mipmap/ic_fecha" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtFecha"
+            <EditText
+                android:id="@+id/txtFecha"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtPass"
+                android:hint="@string/fecha"
+                android:inputType="date"
+                android:maxLines="1" />
 
-                <EditText
-                    android:id="@+id/txtFecha"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/txtPass"
-                    android:hint="@string/fecha"
-                    android:inputType="date"
-                    android:maxLines="1" />
-            </android.support.design.widget.TextInputLayout>
-        </TableRow>
+        </android.support.design.widget.TextInputLayout>
 
         <RadioGroup
             android:id="@+id/rdgenero"
@@ -214,8 +218,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/lineaFecha"
-            android:layout_marginTop="10dp"
+            android:layout_below="@+id/input_layout_txtFecha"
+            android:layout_marginTop="15dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -227,7 +231,8 @@
                 android:src="@mipmap/ic_user" />
 
             <RadioButton
-                android:layout_width="wrap_content"
+                android:id="@+id/radioButton5"
+                android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:hint="@string/m" />
@@ -252,8 +257,8 @@
                 android:id="@+id/icoLugar"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="15dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
                 android:src="@mipmap/ic_lugar" />
 
             <Spinner
@@ -284,7 +289,6 @@
             android:textAllCaps="false"
             android:textColor="@color/colorBlack"
             android:textSize="18sp" />
-
 
     </RelativeLayout>
 

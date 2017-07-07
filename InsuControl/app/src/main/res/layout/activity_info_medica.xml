@@ -8,21 +8,23 @@
 
 
     <RelativeLayout
-        android:layout_width="308dp"
+        android:layout_width="match_parent"
         android:layout_height="495dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
 
         <TextView
             android:id="@+id/info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
             android:text="@string/info"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"
             android:textStyle="bold" />
 
 
@@ -53,7 +55,7 @@
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:hint="Kg"
-                    android:inputType="number"/>
+                    android:inputType="number" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
@@ -104,9 +106,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Talla"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
                 android:text="@string/glucosa"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:textSize="18sp" />
 
             <android.support.design.widget.TextInputLayout
@@ -114,6 +116,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_centerHorizontal="true">
+
                 <EditText
                     android:id="@+id/txtMin"
                     android:layout_width="65dp"
@@ -128,6 +131,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_centerHorizontal="true">
+
                 <EditText
                     android:id="@+id/txtMax"
                     android:layout_width="65dp"
@@ -192,9 +196,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/lineaRatio"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:layout_weight="1"
                 android:text="@string/sens"
                 android:textSize="18sp" />
@@ -225,16 +229,16 @@
             android:id="@+id/btnSave"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="68dp"
             android:background="@color/colorAccent"
             android:nestedScrollingEnabled="true"
             android:text="@string/guardar"
             android:textAllCaps="false"
             android:textColor="@color/colorBlack"
-            android:textSize="18sp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="68dp" />
+            android:textSize="18sp" />
 
     </RelativeLayout>
 

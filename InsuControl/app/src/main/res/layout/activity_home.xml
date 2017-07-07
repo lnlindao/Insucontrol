@@ -7,57 +7,155 @@
     android:isScrollContainer="true"
     tools:context="com.example.espol.insucontrol.HomeActivity">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:cardCornerRadius="4dp"
-        app:cardElevation="4dp"
-        app:contentPadding="4dp"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintHorizontal_bias="0.0">
+        tools:layout_editor_absoluteY="8dp">
 
-        <LinearLayout
-            android:id="@+id/lineaGsActual"
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_gs"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/activity_horizontal_margin"
-            android:orientation="horizontal"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteY="8dp">
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:contentPadding="4dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="16dp">
 
-            <TextView
-                android:id="@+id/glucosaActual"
+            <LinearLayout
+                android:id="@+id/lineaGsActual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/glucosaActual"
-                android:textSize="18sp" />
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:orientation="horizontal"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="8dp">
 
-            <EditText
-                android:id="@+id/txtGlucosaActual"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                <TextView
+                    android:id="@+id/glucosaActual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/glucosaActual"
+                    android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="md/dL"
-                android:textSize="18sp" />
+                <EditText
+                    android:id="@+id/txtGlucosaActual"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ml/dL"
+                    android:textSize="18sp" />
 
-    </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_ch"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/card_gs"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:contentPadding="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="16dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbarCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    app:popupTheme="@style/Theme.AppCompat.Light"
+                    app:subtitleTextAppearance="@style/AppTheme"
+                    app:theme="@style/AppTheme"
+                    app:titleTextAppearance="@style/AppTheme" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/verListaCh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:padding="4dp"
+                    android:src="@mipmap/ic_mas_black"
+                    app:fabSize="normal" />
+
+                <TextView
+                    android:id="@+id/lblListaCh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginStart="22dp"
+                    android:text="Ver lista carbohidratos"
+                    android:textSize="18sp"
+                    android:layout_alignBottom="@+id/verListaCh"
+                    android:layout_toRightOf="@+id/verListaCh"
+                    android:layout_toEndOf="@+id/verListaCh"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/lblOtrosCh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otros carbohidratos"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/verListaCh"
+                    android:layout_alignLeft="@+id/verListaCh"
+                    android:layout_alignStart="@+id/verListaCh"
+                    android:layout_marginTop="19dp" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/lblOtrosCh"
+                    android:layout_alignBottom="@+id/lblOtrosCh"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_toEndOf="@+id/lblOtrosCh"
+                    android:layout_toRightOf="@+id/lblOtrosCh"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
