@@ -12,6 +12,7 @@
         android:layout_height="match_parent"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         tools:layout_editor_absoluteY="0dp">
@@ -21,17 +22,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp"
             app:contentPadding="4dp"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="16dp">
+            tools:layout_editor_absoluteY="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
             <LinearLayout
                 android:id="@+id/lineaGsActual"
@@ -45,7 +46,7 @@
                 <TextView
                     android:id="@+id/glucosaActual"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_weight="1"
                     android:text="@string/glucosaActual"
                     android:textSize="18sp" />
@@ -55,13 +56,13 @@
                     android:layout_width="117dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="number"
+                    android:textAlignment="center" />
 
                 <TextView
                     android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="65dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="ml/dL"
                     android:textSize="18sp" />
 
@@ -72,14 +73,10 @@
         <android.support.v7.widget.CardView
             android:id="@+id/card_ch"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="280dp"
             android:layout_below="@+id/card_gs"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp"
@@ -87,13 +84,32 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            tools:layout_editor_absoluteY="16dp">
+            tools:layout_editor_absoluteY="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/lblOtrosCh"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/verListaCh"
+                    android:layout_toRightOf="@+id/verListaCh"
+                    android:text="Ver lista carbohidratos"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/verListaCh"
@@ -112,53 +128,139 @@
                     android:id="@+id/lblListaCh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/verListaCh"
+                    android:layout_above="@+id/lblOtrosCh"
                     android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="22dp"
-                    android:layout_marginStart="22dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
                     android:layout_toEndOf="@+id/verListaCh"
                     android:layout_toRightOf="@+id/verListaCh"
                     android:text="Ver lista carbohidratos"
-                    android:textSize="18sp" />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:id="@+id/lblOtrosCh"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="27dp"
-                    android:text="Carbohidratos seleccionados"
-                    android:textSize="18sp"
-                    android:layout_below="@+id/verListaCh"
                     android:layout_alignLeft="@+id/verListaCh"
-                    android:layout_alignStart="@+id/verListaCh" />
+                    android:layout_alignStart="@+id/verListaCh"
+                    android:layout_below="@+id/verListaCh"
+                    android:layout_marginTop="27dp"
+                    android:layout_toStartOf="@+id/chSeleccionados"
+                    android:text="Carbohidratos seleccionados"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/lblChSeleccionados"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Otros carbohidratos"
-                    android:textSize="18sp"
-                    android:layout_alignBaseline="@+id/editText"
-                    android:layout_alignBottom="@+id/editText"
+                    android:layout_alignBaseline="@+id/chOtros"
+                    android:layout_alignBottom="@+id/chOtros"
                     android:layout_alignLeft="@+id/lblOtrosCh"
-                    android:layout_alignStart="@+id/lblOtrosCh" />
+                    android:layout_alignStart="@+id/lblOtrosCh"
+                    android:text="Otros carbohidratos"
+                    android:textSize="18sp" />
 
-                <EditText
-                    android:id="@+id/editText"
+                <TextView
+                    android:id="@+id/chSeleccionados"
                     android:layout_width="117dp"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:layout_below="@+id/lblOtrosCh"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/lblOtrosCh"
+                    android:layout_toLeftOf="@+id/gr"
+                    android:hint="10"
+                    android:textAlignment="textEnd"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/gr"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/lblOtrosCh"
+                    android:layout_toEndOf="@+id/lblListaCh"
+                    android:layout_toRightOf="@+id/lblListaCh"
+                    android:hint="gr"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/chOtros"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chSeleccionados"
+                    android:layout_marginTop="16dp"
+                    android:layout_toLeftOf="@+id/grOtros"
+                    android:layout_toRightOf="@+id/lblChSeleccionados"
+                    android:layout_toStartOf="@+id/grOtros"
+                    android:inputType="number"
+                    android:textAlignment="textEnd" />
+
+                <TextView
+                    android:id="@+id/grOtros"
+                    android:layout_width="117dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/chOtros"
+                    android:layout_alignBottom="@+id/chOtros"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginRight="14dp"
-                    android:layout_marginEnd="14dp"
-                    android:layout_marginTop="15dp" />
+                    android:layout_alignParentRight="true"
+                    android:layout_toEndOf="@+id/chSeleccionados"
+                    android:layout_toRightOf="@+id/chSeleccionados"
+                    android:hint="gr"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/lblTotalCh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/lblChSeleccionados"
+                    android:layout_alignStart="@+id/lblChSeleccionados"
+                    android:layout_below="@+id/chOtros"
+                    android:layout_marginTop="30dp"
+                    android:text="Total Carbohidratos"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/totalCh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/lblTotalCh"
+                    android:layout_alignEnd="@+id/chOtros"
+                    android:layout_alignLeft="@+id/chOtros"
+                    android:layout_alignRight="@+id/chOtros"
+                    android:layout_alignStart="@+id/chOtros"
+                    android:text="0"
+                    android:textAlignment="textEnd"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/lblGr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/totalCh"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_toEndOf="@+id/totalCh"
+                    android:layout_toRightOf="@+id/totalCh"
+                    android:text="gr"
+                    android:textAlignment="center"
+                    android:textSize="18sp" />
 
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/card_ch"
+            android:layout_marginTop="291dp"
+            android:background="@color/colorAccent"
+            android:text="CALCULAR"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
     </RelativeLayout>
 

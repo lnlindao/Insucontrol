@@ -7,4 +7,5 @@
 
     <color name="colorButton">#0375a4</color>
     <color name="colorBlack">#000</color>
+    <color name="colorBlanco">#fff</color>
 </resources>

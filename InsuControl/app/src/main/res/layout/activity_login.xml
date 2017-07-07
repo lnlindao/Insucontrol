@@ -1,158 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.espol.insucontrol.LoginActivity">
+    tools:context="com.example.espol.insucontrol.LoginActivity"
+    android:background="@color/colorPrimaryDark">
 
     <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="551dp"
-        tools:layout_editor_absoluteX="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/logoBlanco"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:src="@mipmap/ic_logoic"
-            android:contentDescription="" />
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:contentDescription=""
+            android:src="@mipmap/ic_logo_blan" />
 
-        <RelativeLayout
-            android:layout_width="300dp"
+        <ImageView
+            android:id="@+id/icomail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="33dp"
+            android:src="@mipmap/ic_mail_blanco"
+            android:layout_below="@+id/logoBlanco"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtUser"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imageView"
-            android:layout_centerHorizontal="true">
-            }
+            android:layout_below="@+id/logoBlanco"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="19dp"
+            android:layout_toRightOf="@+id/icomail"
+            android:layout_toEndOf="@+id/icomail">
 
-            <TableRow
-                android:id="@+id/lineaCorreo"
+            <EditText
+                android:id="@+id/txtUser"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="8dp">
+                android:layout_height="50dp"
+                android:layout_above="@+id/input_layout_txtPass"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:hint="@string/correo"
+                android:inputType="textEmailAddress"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
 
-                <ImageView
-                    android:id="@+id/correoIco"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="40dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@mipmap/ic_mail" />
+        <ImageView
+            android:id="@+id/imgPwd"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/ic_pwd_blanco"
+            android:layout_below="@+id/input_layout_txtUser"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_txtUser"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true">
-                    <EditText
-                        android:id="@+id/txtUser"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_alignEnd="@+id/btnLogin"
-                        android:layout_alignLeft="@+id/btnLogin"
-                        android:layout_alignParentTop="true"
-                        android:layout_alignRight="@+id/btnLogin"
-                        android:layout_alignStart="@+id/btnLogin"
-                        android:layout_below="@+id/correoIco"
-                        android:layout_centerVertical="true"
-                        android:hint="@string/correo"
-                        android:inputType="textEmailAddress"
-                        android:maxLines="1" />
-                </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_txtUser"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/imgPwd"
+            android:layout_toEndOf="@+id/imgPwd">
 
-            </TableRow>
-
-            <TableRow
-                android:id="@+id/lineaPwd"
+            <EditText
+                android:id="@+id/txtPass"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:layout_below="@id/lineaCorreo"
-                android:layout_marginBottom="10dp"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="8dp">
+                android:layout_height="50dp"
+                android:layout_alignEnd="@+id/txtUser1"
+                android:layout_alignLeft="@+id/txtUser1"
+                android:layout_alignRight="@+id/txtUser1"
+                android:layout_alignStart="@+id/txtUser1"
+                android:layout_below="@id/txtUser1"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="15dp"
+                android:hint="@string/pass"
+                android:inputType="textPassword"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
 
-                <ImageView
-                    android:id="@+id/correoPwd"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="40dp"
-                    android:layout_marginTop="20dp"
-                    android:src="@mipmap/ic_pwd" />
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/input_layout_txtPass"
+            android:layout_marginTop="23dp"
+            android:background="@color/colorAccent"
+            android:nestedScrollingEnabled="true"
+            android:text="@string/siguiente"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="30dp"
+            android:textSize="18sp"  />
 
-                <android.support.design.widget.TextInputLayout
-                    android:id="@+id/input_layout_txtPass"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/txtRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="13dp"
+            android:text="¿No tienes cuenta?"
+            android:textAlignment="center"
+            android:textStyle="bold" />
 
-                    <EditText
-                        android:id="@+id/txtPass"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_alignEnd="@+id/txtUser1"
-                        android:layout_alignLeft="@+id/txtUser1"
-                        android:layout_alignRight="@+id/txtUser1"
-                        android:layout_alignStart="@+id/txtUser1"
-                        android:layout_below="@id/txtUser1"
-                        android:layout_centerVertical="true"
-                        android:layout_marginBottom="15dp"
-                        android:hint="@string/pass"
-                        android:inputType="textPassword"
-                        android:maxLines="1" />
+        <Button
+            android:id="@+id/btnRegistro"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txtRegistro"
+            android:layout_marginTop="23dp"
+            android:background="@color/colorPrimary"
+            android:nestedScrollingEnabled="true"
+            android:text="@string/registro"
+            android:textAllCaps="false"
+            android:layout_marginBottom="30dp"
+            android:textSize="18sp" />
 
-                </android.support.design.widget.TextInputLayout>
-
-            </TableRow>
-
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/lineaPwd"
-                android:layout_centerHorizontal="true"
-                android:background="@color/colorAccent"
-                android:nestedScrollingEnabled="true"
-                android:text="@string/comenzar"
-                android:textAllCaps="false"
-                android:textColor="#333"
-                android:textSize="18sp" />
-
-
-            <TextView
-                android:id="@+id/nuevoUsr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btnLogin"
-                android:layout_marginTop="20dp"
-                android:text="¿No tienes cuenta?"
-                android:textAlignment="center"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnRegistro"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/nuevoUsr"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorButton"
-                android:nestedScrollingEnabled="true"
-                android:text="@string/registro"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18sp" />
-
-
-        </RelativeLayout>
 
 
     </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+</ScrollView>
