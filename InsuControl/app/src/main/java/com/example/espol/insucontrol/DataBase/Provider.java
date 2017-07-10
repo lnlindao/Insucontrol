@@ -246,7 +246,7 @@ public class Provider extends ContentProvider {
         }else if(ContractCiudad.uriMatcher.match(uri)==ContractCiudad.SINGLE_ROW){
             long idStock = ContentUris.parseId(uri);
             affected = db.delete(ContractCiudad.CIUDAD,
-                    ContractCiudad.CIUDAD + "=" + idStock
+                    Constantes.ID_REMOTA + "=" + idStock
                             + (!TextUtils.isEmpty(selection) ?
                             " AND (" + selection + ')' : ""),
                     selectionArgs);

@@ -16,7 +16,9 @@
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
         <TextView
             android:id="@+id/textView2"
@@ -177,13 +179,39 @@
                 android:maxLines="1" />
         </android.support.design.widget.TextInputLayout>
 
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_txtApellidoPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/input_layout_txtUserPaciente"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/paciente"
+            android:layout_toRightOf="@+id/paciente">
+
+            <EditText
+                android:id="@+id/txtApellidoPaciente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/info"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:hint="@string/user"
+                android:maxLines="1" />
+        </android.support.design.widget.TextInputLayout>
+
         <ImageView
             android:id="@+id/icoFecha"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/input_layout_txtUserPaciente"
+            android:layout_below="@+id/input_layout_txtApellidoPaciente"
             android:layout_marginTop="35dp"
             android:src="@mipmap/ic_fecha" />
 
@@ -193,7 +221,7 @@
             android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/input_layout_txtUserPaciente"
+            android:layout_below="@+id/input_layout_txtApellidoPaciente"
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/paciente"
             android:layout_toRightOf="@+id/paciente">
@@ -230,13 +258,14 @@
                 android:src="@mipmap/ic_user" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/rM"
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:hint="@string/m" />
 
             <RadioButton
+                android:id="@+id/rF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/f" />

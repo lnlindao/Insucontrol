@@ -16,6 +16,9 @@
     <string name="sens">Sensibilidad Insulina</string>
     <string name="glucosaActual">Glucosa actual (GS)</string>
 
+
+    <string name="categoria">Categoria</string>
+
     <!--Button-->
     <string name="comenzar">Comenzar</string>
     <string name="registro">Regístrate</string>

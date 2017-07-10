@@ -124,7 +124,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String provincias = "";
 
         // Select All Query
-        String selectQuery = "SELECT DISTINCT " + ContractProvincia.Columnas._ID +" FROM " + ContractProvincia.PROVINCIA + " WHERE " +
+        String selectQuery = "SELECT DISTINCT " + Constantes.ID_REMOTA +" FROM " + ContractProvincia.PROVINCIA + " WHERE " +
                 ContractProvincia.Columnas.NOMBRE + "=?";
         db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery,new String[]{prov});
@@ -132,7 +132,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                provincias  = cursor.getString(cursor.getColumnIndexOrThrow(ContractProvincia.Columnas._ID));
+                provincias  = cursor.getString(cursor.getColumnIndexOrThrow(Constantes.ID_REMOTA));
+            } while (cursor.moveToNext());
+        }
+        // closing connection
+        cursor.close();
+        db.close();
+        // returning lables
+        return provincias;
+    }
+
+
+    public String getIdCiudad(String ciudad){
+        String provincias = "";
+
+        // Select All Query
+        String selectQuery = "SELECT DISTINCT " + Constantes.ID_REMOTA +" FROM " + ContractCiudad.CIUDAD + " WHERE " +
+                ContractCiudad.Columnas.NOMBRE + "=?";
+        db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery,new String[]{ciudad});
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                provincias  = cursor.getString(cursor.getColumnIndexOrThrow(Constantes.ID_REMOTA));
             } while (cursor.moveToNext());
         }
         // closing connection

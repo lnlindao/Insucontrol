@@ -7,14 +7,17 @@ public class Constantes {
     /**
      * URLs del Web Service
      */
+    private static final String URL = "http://insucontrol.life";
 
-    private static final String URL = "http://insucontrol.novaestilos.com";
-
-    //OBTENER TODOS LOS PUNTOVENTAS
+    //OBTENER DATA
     public static final String GET_CIUDADES = URL + "/pdo_servicios/Ws_Ic/vista/obtenerCiudades.php";
-
-    //OBTENER EXHIBITION
     public static final String GET_PROVINCIA = URL + "/pdo_servicios/Ws_Ic/vista/obtenerProvincias.php";
+    public static final String GET_CATEGORIA = URL + "/pdo_servicios/Ws_Ic/vista/obtenerCategoria.php";
+    public static final String GET_ALIMENTOS = URL + "/pdo_servicios/Ws_Ic/vista/obtenerCarbohidratos.php";
+
+    //INSERTAR DATA
+    public static final String INSERT_REGISTRO = URL + "/pdo_servicios/Ws_Ic/vista/guardarUsuario.php";
+    public static final String INSERT_INFOMEDICA = URL + "/pdo_servicios/Ws_Ic/vista/guardarInfoMedica.php";
 
 
     /**
@@ -25,11 +28,7 @@ public class Constantes {
     public static final String PROVINCIAS = "provincias";
     public static final String CIUDADES = "ciudades";
 
-    public static final String ID_EXH = "idExh";
-
-    public static final String ID_COORD = "idCoord";
-    public static final String ID_RASTREO = "idGps";
-
+    public static final String ID = "ultimoId";
     //CONSTANTES BAJADA
     public static final String bajar_data="bajarData";
 

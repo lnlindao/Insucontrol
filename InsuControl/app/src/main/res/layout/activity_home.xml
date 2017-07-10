@@ -15,7 +15,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
         <android.support.v7.widget.CardView
             android:id="@+id/card_gs"
@@ -96,20 +98,6 @@
                 android:layout_height="match_parent">
 
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@+id/lblOtrosCh"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_toEndOf="@+id/verListaCh"
-                    android:layout_toRightOf="@+id/verListaCh"
-                    android:text="Ver lista carbohidratos"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
 
                 <android.support.design.widget.FloatingActionButton
                     android:id="@+id/verListaCh"
@@ -136,6 +124,7 @@
                     android:layout_toRightOf="@+id/verListaCh"
                     android:text="Ver lista carbohidratos"
                     android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
                     android:textSize="20sp"/>
 
                 <TextView
