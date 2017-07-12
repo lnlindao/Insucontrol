@@ -29,4 +29,8 @@
     <string name="account_type">com.example.espol.insucontrol.account</string>
     <string name="provider_authority">com.example.espol.insucontrol</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="infoAlimentos">Información de alimentos</string>
+    <string name="porcionTt">Porción a ingerir</string>
+
 </resources>

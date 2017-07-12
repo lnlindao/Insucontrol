@@ -5,9 +5,13 @@
 
     <TextView
         android:id="@+id/lblcategoria"
+        android:layout_height="80dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:textAlignment="viewStart"
+        android:gravity="center"
         android:hint="@string/categoria"/>
 
 </LinearLayout>

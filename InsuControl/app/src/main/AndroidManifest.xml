@@ -63,7 +63,7 @@
                 android:resource="@xml/sync_adapter" />
         </service>
 
-        <activity android:name=".ListCategoria" />
+        <activity android:name=".ListCategoria" android:parentActivityName=".HomeActivity"> </activity>
         <activity android:name=".ListAlimentos"></activity>
     </application>
 

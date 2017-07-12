@@ -2,6 +2,7 @@ package com.example.espol.insucontrol;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -20,6 +21,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         listCat = (FloatingActionButton) findViewById(R.id.verListaCh);
         listCat.setOnClickListener(this);
+
+
+        /*BARRA CON ÍCONO*/
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.mipmap.ic_logo_blan);
     }
 
     @Override

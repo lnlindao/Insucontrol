@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.espol.insucontrol.LoginActivity"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/fondoLogin">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,8 +26,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:contentDescription=""
             android:src="@mipmap/ic_logo_blan" />
 

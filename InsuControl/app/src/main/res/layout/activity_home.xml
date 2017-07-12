@@ -10,11 +10,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
         tools:layout_editor_absoluteY="0dp"
         android:focusable="true"
         android:focusableInTouchMode="true">
@@ -28,13 +23,11 @@
             app:cardElevation="4dp"
             app:contentPadding="4dp"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
             tools:layout_editor_absoluteY="16dp"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
 
             <LinearLayout
                 android:id="@+id/lineaGsActual"
@@ -76,10 +69,8 @@
             android:id="@+id/card_ch"
             android:layout_width="match_parent"
             android:layout_height="280dp"
-            android:layout_below="@+id/card_gs"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginTop="15dp"
             app:cardCornerRadius="4dp"
             app:cardElevation="4dp"
             app:contentPadding="16dp"
@@ -87,10 +78,9 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             tools:layout_editor_absoluteY="16dp"
+            android:layout_below="@+id/card_gs"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true">
+            android:layout_alignParentStart="true">
 
 
             <RelativeLayout
