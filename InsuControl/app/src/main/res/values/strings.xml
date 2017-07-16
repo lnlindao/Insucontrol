@@ -34,7 +34,7 @@
     <string name="provider_authority">com.example.espol.insucontrol</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="infoAlimentos">Información de alimentos</string>
+    <string name="infoAlimentos">Nombre del alimento</string>
     <string name="porcionTt">Porción a ingerir</string>
 
 </resources>

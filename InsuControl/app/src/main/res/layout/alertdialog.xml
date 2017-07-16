@@ -13,11 +13,12 @@
         android:layout_marginTop="8dp">
 
         <TextView
-            android:id="@+id/infoTitulo"
+            android:id="@+id/nombreAlimento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/infoAlimentos"
             android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold" />
 
         <TextView
@@ -26,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/infoTitulo"
+            android:layout_below="@+id/nombreAlimento"
             android:layout_marginTop="11dp"
             android:text="@string/porcionTt"
             android:layout_marginBottom="15dp"
@@ -44,8 +45,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <Spinner
-            android:id="@+id/spinner"
+        <TextView
+            android:id="@+id/porcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/cantidadPorciones"
@@ -65,7 +66,7 @@
             android:textSize="18dp" />
 
         <TextView
-            android:id="@+id/numTotalCh"
+            android:id="@+id/numeroCh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20"
@@ -82,11 +83,11 @@
             android:layout_height="wrap_content"
             android:text="gr."
             android:textSize="18dp"
-            android:layout_alignBaseline="@+id/numTotalCh"
-            android:layout_alignBottom="@+id/numTotalCh"
+            android:layout_alignBaseline="@+id/numeroCh"
+            android:layout_alignBottom="@+id/numeroCh"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_toRightOf="@+id/numTotalCh"
-            android:layout_toEndOf="@+id/numTotalCh" />
+            android:layout_toRightOf="@+id/numeroCh"
+            android:layout_toEndOf="@+id/numeroCh" />
     </RelativeLayout>
 </ScrollView>

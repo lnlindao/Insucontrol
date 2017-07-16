@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.espol.insucontrol.Conexion.Constantes;
 import com.example.espol.insucontrol.Conexion.VolleySingleton;
@@ -59,6 +60,14 @@ public class ListAlimentos extends AppCompatActivity implements AdapterView.OnIt
 
         JSONObject jobject = new JSONObject(map);
         Log.d("TAG", jobject.toString());
+
+
+
+
+
+
+
+
 
         // Actualizar datos en el servidor
         VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(
