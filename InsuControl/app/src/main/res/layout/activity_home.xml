@@ -80,7 +80,9 @@
             tools:layout_editor_absoluteY="16dp"
             android:layout_below="@+id/card_gs"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
 
 
             <RelativeLayout
@@ -239,7 +241,9 @@
             android:background="@color/colorAccent"
             android:text="CALCULAR"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
 
     </RelativeLayout>
 

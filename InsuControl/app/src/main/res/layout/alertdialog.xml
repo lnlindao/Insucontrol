@@ -7,219 +7,86 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
+        android:layout_height="match_parent"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp">
 
         <TextView
-            android:id="@+id/info"
-            android:layout_width="wrap_content"
+            android:id="@+id/infoTitulo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/info"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="20sp"
+            android:text="@string/infoAlimentos"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
-
-        <LinearLayout
-            android:id="@+id/lineaPeso"
+        <TextView
+            android:id="@+id/PorcionTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/info"
-            android:orientation="horizontal">
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/infoTitulo"
+            android:layout_marginTop="11dp"
+            android:text="@string/porcionTt"
+            android:layout_marginBottom="15dp"
+            android:textSize="18dp" />
 
-            <TextView
-                android:id="@+id/Peso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_weight="1"
-                android:text="@string/peso"
-                android:textSize="18sp" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtPeso"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
-
-                <EditText
-                    android:id="@+id/txtPeso"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="Kg"
-                    android:inputType="number" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/lineaTalla"
-            android:layout_width="match_parent"
+        <EditText
+            android:id="@+id/cantidadPorciones"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lineaPeso"
-            android:orientation="horizontal">
+            android:ems="10"
+            android:text="1"
+            android:textAlignment="center"
+            android:inputType="number"
+            android:layout_below="@+id/PorcionTitulo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-            <TextView
-                android:id="@+id/Talla"
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_weight="1"
-                android:text="@string/talla"
-                android:textSize="18sp" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtTalla"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
-
-                <EditText
-                    android:id="@+id/txtTalla"
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Cm"
-                    android:inputType="number"
-                    android:textAlignment="viewStart" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/lineaGlucosaObj"
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lineaTalla"
-            android:orientation="horizontal">
+            android:layout_alignBottom="@+id/cantidadPorciones"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/cantidadPorciones" />
 
-            <TextView
-                android:id="@+id/Glucosa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/Talla"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_weight="1"
-                android:text="@string/glucosa"
-                android:textSize="18sp" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtMin"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
-
-                <EditText
-                    android:id="@+id/txtMin"
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/min"
-                    android:inputType="number"
-                    android:textAlignment="center" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtMax"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
-
-                <EditText
-                    android:id="@+id/txtMax"
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/txtMin"
-                    android:layout_alignBottom="@+id/txtMin"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginStart="25dp"
-                    android:layout_toEndOf="@+id/txtMin"
-                    android:layout_toRightOf="@+id/txtMin"
-                    android:hint="@string/max"
-                    android:inputType="number"
-                    android:textAlignment="center" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/lineaRatio"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/NumCh"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lineaGlucosaObj"
-            android:orientation="horizontal">
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cantidadPorciones"
+            android:layout_marginTop="16dp"
+            android:text="Total Carbohidratos"
+            android:textSize="18dp" />
 
-            <TextView
-                android:id="@+id/Ratio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/lineaGlucosaObj"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_weight="1"
-                android:text="@string/ratio"
-                android:textSize="18sp" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtRatio"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
-
-                <EditText
-                    android:id="@+id/txtRatio"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:inputType="number"
-                    android:text="15"
-                    android:textAlignment="center" />
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:id="@+id/lineaSensibilidad"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/numTotalCh"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/lineaRatio"
-            android:orientation="horizontal">
+            android:text="20"
+            android:textSize="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignBaseline="@+id/NumCh"
+            android:layout_alignBottom="@+id/NumCh"
+            android:layout_toRightOf="@+id/NumCh" />
 
-            <TextView
-                android:id="@+id/Sens"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/lineaRatio"
-                android:layout_marginTop="@dimen/activity_vertical_margin"
-                android:layout_weight="1"
-                android:text="@string/sens"
-                android:textSize="18sp" />
-
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/input_layout_txtSens"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true">
-
-                <EditText
-                    android:id="@+id/txtSens"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@+id/btnSave"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_weight="1"
-                    android:inputType="number"
-                    android:text="50"
-                    android:textAlignment="center" />
-            </android.support.design.widget.TextInputLayout>
-
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/lblGr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gr."
+            android:textSize="18dp"
+            android:layout_alignBaseline="@+id/numTotalCh"
+            android:layout_alignBottom="@+id/numTotalCh"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/numTotalCh"
+            android:layout_toEndOf="@+id/numTotalCh" />
     </RelativeLayout>
 </ScrollView>

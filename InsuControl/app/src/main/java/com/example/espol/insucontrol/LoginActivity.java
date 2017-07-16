@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.espol.insucontrol.Conexion.Constantes;
@@ -13,6 +14,7 @@ import com.example.espol.insucontrol.Sync.SyncAdapter;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnComenzar;
+    EditText txtUser, txtPass;
     Button btnRegistro;
 
 

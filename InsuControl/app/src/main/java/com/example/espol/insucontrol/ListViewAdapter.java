@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Lucky Ecuador on 29/06/2016.
- */
 public class ListViewAdapter extends ArrayAdapter<String> {
 
     private List<String> values;
@@ -34,7 +31,8 @@ public class ListViewAdapter extends ArrayAdapter<String> {
         if(null == convertView){
             v= inflater.inflate(R.layout.row,parent,false);
             //Colorear cada 2 lineas
-            if(position % 2 == 0){v.setBackgroundColor(Color.rgb(238, 233, 233));}
+           // if(position % 2 == 0){v.setBackgroundColor(Color.rgb(238, 233, 233));
+            // }
         }
 
         //Obtener instancias de los elementos

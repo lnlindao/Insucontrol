@@ -1,5 +1,6 @@
 package com.example.espol.insucontrol;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -43,6 +44,11 @@ public class ListAlimentos extends AppCompatActivity implements AdapterView.OnIt
 
         listview = (ListView)findViewById(android.R.id.list);
         poblarList(id);
+
+        /*BARRA CON ÍCONO*/
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setTitle(R.string.tituloListaAlimentos);
     }
 
 
@@ -128,14 +134,13 @@ public class ListAlimentos extends AppCompatActivity implements AdapterView.OnIt
         LayoutInflater inflater = this.getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.alertdialog, null);
         //Title
-        builder.setIcon(android.R.drawable.ic_menu_set_as);
-        builder.setTitle(R.string.app_name);
+        builder.setIcon(R.mipmap.ic_alimentos);
+        builder.setTitle(R.string.infoAlimentos);
         builder.setView(LayoutInflater.from(this).inflate(R.layout.alertdialog,null));
 
         //Traer Views
 //        txtusuario = (EditText)dialogView.findViewById(R.id.txtOperador);
-
-        builder.setNegativeButton("Cancelar",null);
+        builder.setPositiveButton("Guardar",null);
         builder.setView(dialogView);
         AlertDialog ad = builder.create();
         ad.show();

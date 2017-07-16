@@ -64,7 +64,7 @@
         </service>
 
         <activity android:name=".ListCategoria" android:parentActivityName=".HomeActivity"> </activity>
-        <activity android:name=".ListAlimentos"></activity>
+        <activity android:name=".ListAlimentos" android:parentActivityName=".ListCategoria"></activity>
     </application>
 
 </manifest>

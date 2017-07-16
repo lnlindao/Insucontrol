@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">InsuControl</string>
     <string name="pass">Contraseña</string>
-    <string name="user">Nombre y Apellido</string>
+    <string name="user">Nombre y apellido</string>
+    <string name="userNombre">Nombre</string>
+    <string name="userApellido">Apellido</string>
     <string name="correo">Correo</string>
     <string name="fecha">Fecha de nacimiento</string>
     <string name="m">Masculino</string>
@@ -16,6 +18,8 @@
     <string name="sens">Sensibilidad Insulina</string>
     <string name="glucosaActual">Glucosa actual (GS)</string>
 
+    <string name="tituloCategorias">Lista de categorías</string>
+    <string name="tituloListaAlimentos">Lista de alimentos</string>
 
     <string name="categoria">Categoria</string>
 
