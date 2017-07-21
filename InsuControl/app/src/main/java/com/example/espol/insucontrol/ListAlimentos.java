@@ -14,7 +14,6 @@ import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.espol.insucontrol.Conexion.Constantes;
 import com.example.espol.insucontrol.Conexion.VolleySingleton;
@@ -60,14 +59,6 @@ public class ListAlimentos extends AppCompatActivity implements AdapterView.OnIt
 
         JSONObject jobject = new JSONObject(map);
         Log.d("TAG", jobject.toString());
-
-
-
-
-
-
-
-
 
         // Actualizar datos en el servidor
         VolleySingleton.getInstance(getApplicationContext()).addToRequestQueue(
@@ -141,15 +132,20 @@ public class ListAlimentos extends AppCompatActivity implements AdapterView.OnIt
     public void alertDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.alertdialog, null);
+        View dialogView = inflater.inflate(R.layout.alertdialog_alimento, null);
         //Title
         builder.setIcon(R.mipmap.ic_alimentos);
         builder.setTitle(R.string.infoAlimentos);
-        builder.setView(LayoutInflater.from(this).inflate(R.layout.alertdialog,null));
+        builder.setView(LayoutInflater.from(this).inflate(R.layout.alertdialog_alimento,null));
 
         //Traer Views
 //        txtusuario = (EditText)dialogView.findViewById(R.id.txtOperador);
         builder.setPositiveButton("Guardar",null);
+        /*builder.setPositiveButton(R.string.guardar, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                // User clicked OK button
+            }
+        });*/
         builder.setView(dialogView);
         AlertDialog ad = builder.create();
         ad.show();

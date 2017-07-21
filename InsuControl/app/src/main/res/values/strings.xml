@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">InsuControl</string>
     <string name="pass">Contraseña</string>
-    <string name="user">Nombre y apellido</string>
+    <string name="user">Nombre de usuario</string>
     <string name="userNombre">Nombre</string>
     <string name="userApellido">Apellido</string>
     <string name="correo">Correo</string>

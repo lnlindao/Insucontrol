@@ -12,14 +12,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp">
 
-        <TextView
-            android:id="@+id/nombreAlimento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/infoAlimentos"
-            android:textSize="18dp"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/PorcionTitulo"
@@ -27,11 +19,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/nombreAlimento"
+            android:textSize="18dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:layout_marginTop="11dp"
             android:text="@string/porcionTt"
-            android:layout_marginBottom="15dp"
-            android:textSize="18dp" />
+            android:layout_marginBottom="15dp"/>
 
         <EditText
             android:id="@+id/cantidadPorciones"
@@ -52,7 +45,12 @@
             android:layout_alignBottom="@+id/cantidadPorciones"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_toRightOf="@+id/cantidadPorciones" />
+            android:text="Cargar Porción"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignBaseline="@+id/cantidadPorciones"
+            android:layout_toRightOf="@+id/cantidadPorciones"
+            android:layout_below="@+id/PorcionTitulo" />
 
         <TextView
             android:id="@+id/NumCh"
@@ -62,18 +60,21 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/cantidadPorciones"
             android:layout_marginTop="16dp"
-            android:text="Total Carbohidratos"
+            android:text="Total de carbohidratos"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
             android:textSize="18dp" />
 
         <TextView
             android:id="@+id/numeroCh"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="20"
             android:textSize="18dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_alignBaseline="@+id/NumCh"
+            android:textAlignment="center"
             android:layout_alignBottom="@+id/NumCh"
             android:layout_toRightOf="@+id/NumCh" />
 
